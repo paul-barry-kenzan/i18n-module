@@ -1,0 +1,19 @@
+{
+  "name": "i18n-module",
+  "version": "0.0.1",
+  "description": "A simple AngularJS module that introduces the framework for internationalization.",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paul-barry-kenzan/i18n-module.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/paul-barry-kenzan/i18n-module/issues"
+  },
+  "homepage": "https://github.com/paul-barry-kenzan/i18n-module#readme"
+}
