@@ -2,6 +2,11 @@
   "name": "i18n-module",
   "version": "0.0.1",
   "homepage": "https://github.com/paul-barry-kenzan/i18n-module",
+  "main": [
+    "src/i18n-module.js",
+    "src/services/locale-service.js",
+    "src/directives/locale-selector-directive.js"
+  ],
   "authors": [
     "Paul Barry <pbarry@kenzan.com>"
   ],
