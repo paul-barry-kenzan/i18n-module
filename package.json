@@ -4,7 +4,8 @@
   "description": "A simple AngularJS module that introduces the framework for internationalization.",
   "main": "index.js",
   "scripts": {
-    "test": "npm test"
+    "test": "karma start karma.conf.js",
+    "test-watch": "karma start karma.conf.js --auto-watch --no-single-run"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,15 @@
   "bugs": {
     "url": "https://github.com/paul-barry-kenzan/i18n-module/issues"
   },
-  "homepage": "https://github.com/paul-barry-kenzan/i18n-module#readme"
+  "homepage": "https://github.com/paul-barry-kenzan/i18n-module#readme",
+  "devDependencies": {
+    "chai": "3.5.0",
+    "karma": "0.13.19",
+    "karma-chai": "0.1.0",
+    "karma-mocha": "0.2.1",
+    "karma-phantomjs-launcher": "1.0.0",
+    "karma-sinon-chai": "1.1.0",
+    "mocha": "2.4.5",
+    "phantomjs-prebuilt": "2.1.4"
+  }
 }
