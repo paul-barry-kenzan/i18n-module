@@ -4,7 +4,7 @@
   "homepage": "https://github.com/paul-barry-kenzan/i18n-module",
   "main": [
     "src/i18n-module.js",
-    "src/services/locale-service.js",
+    "src/providers/locale-provider.js",
     "src/directives/locale-selector-directive.js"
   ],
   "authors": [
