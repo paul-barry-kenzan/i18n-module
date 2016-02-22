@@ -33,23 +33,20 @@
       'tmhDynamicLocale',
       function ($rootScope, $log, $translate, tmhDynamicLocale) {
 
-        $translate.use('en_US')
-          .then(function (response) {
-            _currentLocale = response;
-            _locales = Object.keys(_localesObj.locales);
+        _currentLocale = $translate.proposedLanguage();
+        _locales = Object.keys(_localesObj.locales);
 
-            if (!_locales || _locales.length === 0) {
-              $log.error('There are no _LOCALES provided');
+        if (!_locales || _locales.length === 0) {
+          $log.error('There are no _LOCALES provided');
 
-            } else {
-              angular.forEach(_localesObj.locales, function (locale) {
-                _localeDisplayNames.push(locale);
-              });
-
-              _updateLocale(_currentLocale);
-            }
+        } else {
+          angular.forEach(_localesObj.locales, function (locale) {
+            _localeDisplayNames.push(locale);
           });
 
+          _updateLocale(_currentLocale);
+        }
+        
         function getSupportedLocales() {
           return _localesObj.locales;
         }
