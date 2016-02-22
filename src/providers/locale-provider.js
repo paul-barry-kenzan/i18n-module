@@ -59,7 +59,6 @@
         }
 
         function setLocaleByDisplayName(localeDisplayName) {
-          console.log(localeDisplayName);
           _setLocale(_locales[_localeDisplayNames.indexOf(localeDisplayName)]);
         }
 
