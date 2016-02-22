@@ -14,10 +14,8 @@
     "tests"
   ],
   "dependencies": {
-    "angular-cookies": "1.4.9",
-    "angular-dynamic-locale": "0.1.30",
-    "angular-mocks": "1.4.9",
-    "angular-sanitize": "1.4.9",
-    "angular-translate": "2.9.0"
+    "angular-bootstrap": "1.1.2",
+    "bootstrap-css-only": "3.3.6",
+    "i18n-module": "git@github.com:paul-barry-kenzan/i18n-module.git#master"
   }
 }
