@@ -1,18 +1,23 @@
-module.exports = function (config) {
-  config.set({
+var wiredep = require('wiredep')({devDependencies:true}).js;
 
+module.exports = function (config) {
+
+  var appFiles = [
+    'src/**/*-module.js',
+    'src/**/*.js',
+    'src/**/*.test.js'
+  ];
+
+  config.set({
     basePath: './',
 
-    frameworks: ['mocha', 'chai', 'sinon-chai'],
-
-    files: [
-      'bower_components/angular/angular.js',
-      'bower_components/angular-*/angular-*.js',
-      'bower_components/angular-dynamic-locale/dist/tmhDynamicLocale.js',
-      'src/**/*-module.js',
-      'src/**/*.js',
-      'src/**/*.test.js'
+    frameworks: [
+      'mocha',
+      'chai',
+      'sinon-chai'
     ],
+
+    files: [].concat(wiredep, appFiles),
 
     reporters: ['dots'],
 

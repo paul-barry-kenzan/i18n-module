@@ -46,7 +46,7 @@
 
           _updateLocale(_currentLocale);
         }
-        
+
         function getSupportedLocales() {
           return _localesObj.locales;
         }
