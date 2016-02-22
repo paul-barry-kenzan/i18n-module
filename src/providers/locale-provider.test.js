@@ -70,13 +70,11 @@ describe.only('Locale Service', function () {
 
     beforeEach(module(function ($provide) {
 
-      $provide.service('$translate', function () {
+      $provide.service('$translate', function ($q) {
         this.storage = angular.noop;
         this.storageKey = angular.noop;
         this.preferredLanguage = angular.noop;
-        this.use = function () {
-          return 'en_US';
-        };
+        this.use = sinon.stub().returns($q.resolve('en_US'));
 
         $provide.service('tmhDynamicLocale', function () {
           this.set = angular.noop;
@@ -129,6 +127,7 @@ describe.only('Locale Service', function () {
         });
 
         it('should return the locale display name', function () {
+          $rootScope.$apply();
           expect(LocaleService.getLocaleDisplayName()).to.equal(defaultLocales['en_US']);
         });
 
@@ -154,13 +153,15 @@ describe.only('Locale Service', function () {
         });
 
         it('should update the active locale when provided a valid locale name', function () {
+          $rootScope.$apply();
+
           LocaleService.setLocaleByDisplayName(customLocales.ru_RU);
 
           expect(LocaleService.getLocaleDisplayName()).to.equal(customLocales.ru_RU);
         });
 
         it('should utilize the $translate.use method to load and apply the locale changes', function () {
-          var spy = sinon.spy($translate, 'use');
+          var spy = $translate.use;
 
           LocaleService.setLocaleByDisplayName(customLocales['en_US']);
 
@@ -177,6 +178,7 @@ describe.only('Locale Service', function () {
         });
 
         it('should return an array of the supported locale display names', function () {
+          $rootScope.$apply();
           expect(LocaleService.getLocalesDisplayNames()).to.deep.equal(mockDisplayNames);
         });
 
