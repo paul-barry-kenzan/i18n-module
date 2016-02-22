@@ -3,8 +3,8 @@
 (function (angular) {
 
   angular
-      .module('km.i18n')
-      .provider('LocaleService', LocaleProvider);
+    .module('km.i18n')
+    .provider('LocaleService', LocaleProvider);
 
   LocaleProvider.$inject = [];
 
@@ -21,7 +21,7 @@
     var _localeDisplayNames = [];
     var _currentLocale;
 
-    _this.setSupportedLocales = function(localObj){
+    _this.setSupportedLocales = function (localObj) {
       _localesObj.locales = angular.extend(_localesObj.locales, localObj);
       _locales = Object.keys(_localesObj);
     };
@@ -33,32 +33,36 @@
       'tmhDynamicLocale',
       function ($rootScope, $log, $translate, tmhDynamicLocale) {
 
-        _currentLocale = $translate.use();
-        _locales = Object.keys(_localesObj.locales);
+        $translate.use('en_US')
+          .then(function (response) {
+            _currentLocale = response;
+            _locales = Object.keys(_localesObj.locales);
 
-        if (!_locales || _locales.length === 0) {
-          $log.error('There are no _LOCALES provided');
+            if (!_locales || _locales.length === 0) {
+              $log.error('There are no _LOCALES provided');
 
-        } else {
-          _locales.forEach(function (locale) {
-            _localeDisplayNames.push(_localesObj.locales[locale]);
+            } else {
+              angular.forEach(_localesObj.locales, function (locale) {
+                _localeDisplayNames.push(locale);
+              });
+
+              _updateLocale(_currentLocale);
+            }
           });
-          _updateLocale(_currentLocale);
-        }
 
-        function getSupportedLocales (){
+        function getSupportedLocales() {
           return _localesObj.locales;
         }
 
-        function getLocaleDisplayName () {
+        function getLocaleDisplayName() {
           return _localesObj.locales[_currentLocale];
         }
 
-        function setLocaleByDisplayName (localeDisplayName) {
+        function setLocaleByDisplayName(localeDisplayName) {
           _setLocale(_locales[_localeDisplayNames.indexOf(localeDisplayName)]);
         }
 
-        function getLocalesDisplayNames () {
+        function getLocalesDisplayNames() {
           return _localeDisplayNames;
         }
 
@@ -77,10 +81,10 @@
         }
 
         function _updateLocale(locale) {
-          if(locale){
+          if (locale) {
 
-          document.documentElement.setAttribute('lang', locale);
-          tmhDynamicLocale.set(locale.toLowerCase().replace(/_/g, '-'));
+            document.documentElement.setAttribute('lang', locale);
+            tmhDynamicLocale.set(locale.toLowerCase().replace(/_/g, '-'));
           }
         }
 
