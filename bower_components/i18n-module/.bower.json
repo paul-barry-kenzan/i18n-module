@@ -1,0 +1,42 @@
+{
+  "name": "i18n-module",
+  "homepage": "https://github.com/paul-barry-kenzan/i18n-module",
+  "main": [
+    "src/i18n-module.js",
+    "src/providers/locale-provider.js",
+    "src/directives/locale-selector-directive.js"
+  ],
+  "authors": [
+    "Paul Barry <pbarry@kenzan.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "src/**/*.test.js"
+  ],
+  "dependencies": {
+    "angular": "1.4.9",
+    "angular-cookies": "1.4.9",
+    "angular-dynamic-locale": "0.1.30",
+    "angular-i18n": "1.5.0",
+    "angular-sanitize": "1.4.9",
+    "angular-translate": "2.9.0",
+    "angular-translate-handler-log": "2.9.0",
+    "angular-translate-loader-static-files": "2.9.0",
+    "angular-translate-storage-local": "2.9.0"
+  },
+  "devDependencies": {
+    "angular-mocks": "1.4.9"
+  },
+  "_release": "5c759e0f11",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "5c759e0f11c1a0eafd41da49ec4c77d4134e6fc7"
+  },
+  "_source": "git@github.com:paul-barry-kenzan/i18n-module.git",
+  "_target": "master",
+  "_originalSource": "git@github.com:paul-barry-kenzan/i18n-module.git"
+}
