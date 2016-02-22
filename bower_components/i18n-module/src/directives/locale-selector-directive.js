@@ -42,7 +42,7 @@
     '<form class="form-inline">' +
       '<div class="form-group language-select" ng-if="LocaleSelector.visible"> ' +
         '<label>' +
-          '{{vm.label | translate}}:' +
+          '<span ng-show="LocaleSelector.label.length">{{LocaleSelector.label}}:</span>' +
           '<select class="form-control" ng-model="LocaleSelector.currentLocaleDisplayName" ng-options="localesDisplayName for localesDisplayName in LocaleSelector.localesDisplayNames" ng-change="LocaleSelector.changeLanguage(LocaleSelector.currentLocaleDisplayName)"></select>' +
         '</label>' +
       '</div>' +
