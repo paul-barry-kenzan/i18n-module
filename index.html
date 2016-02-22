@@ -1,1 +1,65 @@
-Hello World
+<!doctype html>
+<html lang="en_US">
+    <head>
+        <meta charset="UTF-8">
+        <title>Internationalization Demo</title>
+
+        <link rel="stylesheet" href="bower_components/bootstrap-css-only/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="bower_components/bootstrap-css-only/css/bootstrap-theme.min.css"/>
+        <link rel="stylesheet" href="css/demo.css"/>
+    </head>
+    <body data-ng-app="i18nExampleApp" ng-cloak>
+
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                            data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Internationalization (i18n) Example</a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <div data-ne-locale-selector class="nav navbar-nav navbar-right"
+                         data-label-text="Language"></div>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="jumbotron">
+                        <h2>{{"homepage.welcome" | translate}}</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <p>{{"homepage.paragraph.1" | translate}}</p>
+                </div>
+            </div>
+        </div>
+        <script src="bower_components/angular/angular.min.js"></script>
+        <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+        <script src="bower_components/angular-cookies/angular-cookies.min.js"></script>
+        <script src="bower_components/angular-dynamic-locale/dist/tmhDynamicLocale.min.js"></script>
+        <script src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
+        <script src="bower_components/angular-translate/angular-translate.min.js"></script>
+        <script src="bower_components/angular-translate-handler-log/angular-translate-handler-log.min.js"></script>
+        <script src="bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.min.js"></script>
+        <script src="bower_components/angular-translate-storage-cookie/angular-translate-storage-cookie.min.js"></script>
+        <script src="bower_components/angular-translate-storage-local/angular-translate-storage-local.min.js"></script>
+        <script src="bower_components/i18n-module/src/i18n-module.js"></script>
+        <script src="bower_components/i18n-module/src/providers/locale-provider.js"></script>
+        <script src="bower_components/i18n-module/src/directives/locale-selector-directive.js"></script>
+
+        <script src="scripts/app.js"></script>
+
+    </body>
+</html>
