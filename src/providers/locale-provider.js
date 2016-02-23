@@ -3,7 +3,7 @@
 (function (angular) {
 
   angular
-    .module('km.i18n')
+    .module('webui.i18n')
     .provider('LocaleService', LocaleProvider);
 
   LocaleProvider.$inject = [];

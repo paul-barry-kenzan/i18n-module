@@ -17,7 +17,7 @@ describe.only('Locale Service', function () {
   var customLocales;
   var mockDisplayNames;
 
-  beforeEach(module('km.i18n'));
+  beforeEach(module('webui.i18n'));
 
   describe('Provider Tests', function () {
 

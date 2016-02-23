@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/paul-barry-kenzan/i18n-module.git"
+    "url": "git+https://github.com/ThomsonReuters-IPS/webui-i18n.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/paul-barry-kenzan/i18n-module/issues"
+    "url": "https://github.com/ThomsonReuters-IPS/webui-i18n/issues"
   },
-  "homepage": "https://github.com/paul-barry-kenzan/i18n-module#readme",
+  "homepage": "https://github.com/ThomsonReuters-IPS/webui-i18n#readme",
   "devDependencies": {
     "chai": "3.5.0",
     "karma": "0.13.19",
