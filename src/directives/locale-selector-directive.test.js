@@ -11,7 +11,7 @@ describe('Locale Selector Directive', function () {
 
   var defaultTemplate = '<div ne-locale-selector>';
 
-  beforeEach(module('km.i18n'));
+  beforeEach(module('webui.i18n'));
 
   beforeEach(module(function ($provide) {
 

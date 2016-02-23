@@ -3,7 +3,7 @@
 (function (angular) {
 
   angular
-      .module('km.i18n')
+      .module('webui.i18n')
       .directive('neLocaleSelector', neLocaleSelector)
       .run(loadTemplate);
 
