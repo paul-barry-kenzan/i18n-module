@@ -1,14 +1,14 @@
 {
   "name": "i18n-module",
   "version": "0.0.1",
-  "homepage": "https://github.com/paul-barry-kenzan/i18n-module",
+  "homepage": "https://github.com/ThomsonReuters-IPS/webui-i18n",
   "main": [
     "src/i18n-module.js",
     "src/providers/locale-provider.js",
     "src/directives/locale-selector-directive.js"
   ],
   "authors": [
-    "Paul Barry <pbarry@kenzan.com>"
+    "Paul Barry <Paul.Barry@thomsonreuters.com>"
   ],
   "license": "MIT",
   "ignore": [

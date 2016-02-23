@@ -1,5 +1,5 @@
 angular
-  .module('km.i18n', [
+  .module('webui.i18n', [
     'ngCookies',
     'ngSanitize',
     'pascalprecht.translate',// angular-translate
