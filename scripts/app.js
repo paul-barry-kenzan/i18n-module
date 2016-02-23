@@ -15,7 +15,7 @@
       $translateProvider.determinePreferredLanguage();
       $translateProvider.useLocalStorage();
 
-      tmhDynamicLocaleProvider.localeLocationPattern('../bower_components/angular-i18n/angular-locale_{{locale}}.js');
+      tmhDynamicLocaleProvider.localeLocationPattern('./bower_components/angular-i18n/angular-locale_{{locale}}.js');
 
       // jshint camelcase: false
       // jscs:disable requireCamelCaseOrUpperCaseIdentifiers
