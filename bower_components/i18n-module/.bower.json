@@ -1,13 +1,13 @@
 {
   "name": "i18n-module",
-  "homepage": "https://github.com/paul-barry-kenzan/i18n-module",
+  "homepage": "https://github.com/ThomsonReuters-IPS/webui-i18n",
   "main": [
     "src/i18n-module.js",
     "src/providers/locale-provider.js",
     "src/directives/locale-selector-directive.js"
   ],
   "authors": [
-    "Paul Barry <pbarry@kenzan.com>"
+    "Paul Barry <Paul.Barry@thomsonreuters.com>"
   ],
   "license": "MIT",
   "ignore": [
@@ -30,13 +30,13 @@
   "devDependencies": {
     "angular-mocks": "1.4.9"
   },
-  "_release": "a99c5c9f56",
+  "_release": "7030e9437d",
   "_resolution": {
     "type": "branch",
     "branch": "master",
-    "commit": "a99c5c9f56a1863aabe9cb9fa88dea2b24c63aa2"
+    "commit": "7030e9437d7a081235152295e101139c50fde802"
   },
-  "_source": "git@github.com:paul-barry-kenzan/i18n-module.git",
+  "_source": "git@github.com:ThomsonReuters-IPS/webui-i18n.git",
   "_target": "master",
-  "_originalSource": "git@github.com:paul-barry-kenzan/i18n-module.git"
+  "_originalSource": "git@github.com:ThomsonReuters-IPS/webui-i18n.git"
 }

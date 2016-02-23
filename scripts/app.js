@@ -3,7 +3,7 @@
 (function (angular) {
 
   angular
-    .module('i18nExampleApp', ['km.i18n'])
+    .module('i18nExampleApp', ['webui.i18n'])
     .config(function($translateProvider, tmhDynamicLocaleProvider, LocaleServiceProvider){
       $translateProvider.useMissingTranslationHandlerLog();
 
