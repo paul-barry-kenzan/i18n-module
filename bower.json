@@ -30,5 +30,8 @@
   },
   "devDependencies": {
     "angular-mocks": "1.4.9"
+  },
+  "resolutions": {
+    "angular-translate": "2.9.0"
   }
 }
